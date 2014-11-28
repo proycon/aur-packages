@@ -1,6 +1,6 @@
 _pkgname=python2-clam
 pkgname=${_pkgname}-git
-pkgver=1324
+pkgver=1472
 pkgrel=1
 pkgdesc='CLAM turns command-line tools into fully RESTful webservices and also offers a modern web-based user-interface'
 arch=('i686' 'x86_64')
