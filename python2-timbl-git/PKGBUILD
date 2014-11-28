@@ -1,4 +1,4 @@
-_pkgname=python-timbl
+_pkgname=python2-timbl
 pkgname=${_pkgname}-git
 pkgver=41
 pkgrel=1
@@ -6,7 +6,7 @@ pkgdesc='Python binding for Timbl, a k-Nearest Neighbours machine learning suite
 arch=('i686' 'x86_64')
 url="https://github.com/proycon/python-timbl"
 license=('GPL')
-depends=('python' 'libxml2' 'boost')
+depends=('python2' 'libxml2' 'boost')
 makedepends=('git' 'libtool')
 provides=("${_pkgname}")
 source=("git://github.com/proycon/python-timbl.git")
@@ -21,6 +21,6 @@ pkgver() {
 
 package() {
     cd "$srcdir/$_gitname"
-    python setup3.py build_ext --timbl-library-dir=/usr/lib --timbl-include-dir=/usr/include/ install --prefix={$pkgdir}
+    python setupr2.py build_ext --timbl-library-dir=/usr/lib --timbl-include-dir=/usr/include/ install --prefix={$pkgdir}
 }
 
