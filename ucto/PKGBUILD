@@ -10,7 +10,7 @@ makedepends=('libtool' 'autoconf')
 options=(!libtool)
 url="http://ilk.uvt.nl/ucto"
 source=("http://software.ticc.uvt.nl/$pkgname-$pkgver.tar.gz")
-md5sums=('9053c8eaefb83131d1f31eaccd844608')
+md5sums=('7da26745ff0cd83b27081788a5a8521e')
 
 build() {
   cd $srcdir/$pkgname-$pkgver
