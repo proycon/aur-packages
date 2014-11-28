@@ -1,6 +1,6 @@
 _pkgname=python-timbl
 pkgname=${_pkgname}-git
-pkgver=9
+pkgver=39
 pkgrel=1
 pkgdesc='Python binding for Timbl, a k-Nearest Neighbours machine learning suite'
 arch=('i686' 'x86_64')
@@ -21,6 +21,6 @@ pkgver() {
 
 package() {
     cd "$srcdir/$_gitname"
-    python setup3.py build_ext install --root={$pkgdir}
+    python setup3.py build_ext --timbl-library-dir=/usr/lib --timbl-include-dir=/usr/include/ install --prefix={$pkgdir}
 }
 
