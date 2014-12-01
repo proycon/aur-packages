@@ -1,6 +1,6 @@
 _pkgname=python-timbl
 pkgname=${_pkgname}-git
-pkgver=41
+pkgver=48
 pkgrel=1
 pkgdesc='Python binding for Timbl, a k-Nearest Neighbours machine learning suite'
 arch=('i686' 'x86_64')
