@@ -2,8 +2,8 @@
 pkgname=frogdata
 pkgver=0.6
 pkgrel=1
-pkgdesc="Frog is an integration of memory-based natural language processing (NLP) modules developed for Dutch. It includes a tokenizer, part-of-speech tagger, lemmatizer, morphological analyser, named entity recognition, shallow parser and dependency parser. This package contains the data files"
-arch=('all')
+pkgdesc="Data for Frog. Frog is an integration of memory-based natural language processing (NLP) modules developed for Dutch."
+arch=('any')
 license=('GPL3')
 depends=()
 makedepends=()
