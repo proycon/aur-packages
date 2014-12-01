@@ -8,7 +8,7 @@ pkgdesc='Colibri Core is a set of command-line tools as well as a C++ library (w
 arch=('i686' 'x86_64')
 url="https://proycon.github.io/colibri-core"
 license=('GPL')
-depends=('gcc-libs' 'python' 'cython' 'bzip2')
+depends=('gcc-libs' 'python' 'python-setuptools' 'cython' 'bzip2')
 makedepends=('git' 'libtool' 'autoconf')
 optdepends=('libfolia: FoLiA input support')
 provides=("${_pkgname}")
@@ -32,6 +32,6 @@ build() {
 package() {
     cd "$srcdir/$_gitname"
     make DESTDIR=$pkgdir install 
-    python setup.py install --prefix=/usr/ --root={$pkgdir}
+    python setup.py install --prefix=/usr/ --root="${pkgdir}" --optimize=1
 }
 
