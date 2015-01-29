@@ -1,7 +1,7 @@
 _pkgname=python-ucto
 pkgname=${_pkgname}-git
-pkgver=9
-pkgrel=2
+pkgver=10
+pkgrel=1
 pkgdesc='Python binding for Ucto, an advanced tokenizer (for NLP)'
 arch=('i686' 'x86_64')
 url="https://github.com/proycon/python-ucto"
@@ -25,6 +25,6 @@ build() {
 
 package() {
     cd "$srcdir/$_gitname"
-    python setup3.py install --prefix=/usr --root="${pkgdir}"
+    python setup.py install --prefix=/usr --root="${pkgdir}"
 }
 
