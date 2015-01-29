@@ -6,7 +6,7 @@ pkgdesc='Python binding for Ucto, an advanced tokenizer (for NLP)'
 arch=('i686' 'x86_64')
 url="https://github.com/proycon/python-ucto"
 license=('GPL')
-depends=('python' 'ucto')
+depends=('python' 'ucto>=0.8.0')
 makedepends=('git' 'cython')
 provides=("${_pkgname}")
 source=("git://github.com/proycon/python-ucto.git")
@@ -20,7 +20,7 @@ pkgver() {
 
 build() {
     cd "$srcdir/$_gitname"
-    python setup3.py build_ext build 
+    python setup.py build_ext build 
 }
 
 package() {
