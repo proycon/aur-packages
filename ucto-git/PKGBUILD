@@ -1,20 +1,20 @@
 # Maintainer: Maarten van Gompel <proycon at anaproy.nl>
 
-_pkgname=ticcutils
-pkgname=ticcutils-git
-pkgver=161
+_pkgname=ucto
+pkgname=ucto-git
+pkgver=1
 pkgrel=2
-pkgdesc="Common library with functions for tools developed at Tilburg Centre for Cognition and Communication"
+pkgdesc="An advanced rule-based (regular-expression) and unicode-aware tokenizer for various languages. Tokenization is an essential first step in any NLP pipeline."
 arch=('i686' 'x86_64')
 url="http://ilk.uvt.nl/"
 license=('GPL')
-depends=('gcc-libs' 'libxml2' 'bzip2' 'libtar' 'boost' 'zlib')
-provides=('ticcutils')
-conflicts=('ticcutils')
+depends=('ticcutils' 'icu' 'libxml2' 'libfolia')
+provides=('ucto')
+conflicts=('ucto')
 makedepends=('libtool' 'autoconf')
 options=(!libtool)
-source=("git://github.com/proycon/ticcutils.git")
-_gitname=("ticcutils")
+source=("git://github.com/proycon/ucto.git")
+_gitname=("ucto")
 noextract=()
 md5sums=('SKIP')
 
