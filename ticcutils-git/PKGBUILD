@@ -1,8 +1,9 @@
 # Maintainer: Maarten van Gompel <proycon at anaproy.nl>
 
-pkgname=ticcutils
-pkgver=0.7
-pkgrel=3
+_pkgname=ticcutils
+pkgname=ticcutils-git
+pkgver=1
+pkgrel=1
 pkgdesc="Common library with functions for tools developed at Tilburg Centre for Cognition and Communication"
 arch=('i686' 'x86_64')
 url="http://ilk.uvt.nl/"
@@ -10,14 +11,20 @@ license=('GPL')
 depends=('gcc-libs' 'libxml2' 'bzip2' 'libtar' 'boost' 'zlib')
 makedepends=('libtool' 'autoconf')
 options=(!libtool)
-source=(http://software.ticc.uvt.nl/${pkgname}-${pkgver}.tar.gz)
+source=("git://github.com/proycon/ticcutils.git")
+_gitname=("ticcutils")
 noextract=()
-md5sums=('812370bce2b4cefb48b16ec863e70825')
+md5sums=('SKIP')
+
+pkgver() {
+    cd "$srcdir/$_gitname"
+    git rev-list --count HEAD
+}
 
 build() {
-  cd $srcdir/$pkgname-$pkgver
-  ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var || return 1
-  make || return 1
+    cd "$srcdir/$_gitname"
+    ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var || return 1
+    make || return 1
 }
 
 package() {
